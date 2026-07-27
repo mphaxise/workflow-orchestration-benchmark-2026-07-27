@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A tiny reset for today — choose a 20-minute outdoor activity to widen your attention.">
+  <title>Twenty Minutes Outside</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <!-- Field journal paper texture overlay -->
+    <div class="paper-texture" aria-hidden="true"></div>
+
+    <header class="header">
+      <p class="eyebrow">A tiny reset for today</p>
+      <h1 class="heading">Go where your attention gets wider.</h1>
+      <p class="intro">Choose the kind of reset you need. We'll give you one small route into the day.</p>
+    </header>
+
+    <section class="filters" aria-label="Activity filters">
+      <div class="filter-group" role="group" aria-label="Reset type">
+        <button
+          type="button"
+          class="filter-btn"
+          data-filter="quiet"
+          aria-pressed="false">
+          <span class="filter-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <span class="filter-label">Find a softer edge.</span>
+        </button>
+        <button
+          type="button"
+          class="filter-btn"
+          data-filter="move"
+          aria-pressed="false">
+          <span class="filter-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </span>
+          <span class="filter-label">Put the day back in your body.</span>
+        </button>
+        <button
+          type="button"
+          class="filter-btn"
+          data-filter="notice"
+          aria-pressed="false">
+          <span class="filter-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>
+          </span>
+          <span class="filter-label">Follow one curious detail.</span>
+        </button>
+      </div>
+    </section>
+
+    <main class="activities">
+      <!-- Activity 1: Quiet -->
+      <article
+        class="activity-card"
+        data-activity="quiet"
+        data-type="quiet">
+        <div class="card-paper" aria-hidden="true"></div>
+        <header class="card-header">
+          <span class="card-type">Quiet</span>
+          <time class="card-time" datetime="PT20M">20 min</time>
+        </header>
+        <h2 class="card-title">Bench without a view</h2>
+        <p class="card-description">Walk until you find a bench facing something ordinary. Sit for five minutes. Write down three things that change while you wait.</p>
+        <div class="card-stamp" aria-hidden="true">
+          <svg class="stamp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+      </article>
+
+      <!-- Activity 2: Move -->
+      <article
+        class="activity-card"
+        data-activity="move"
+        data-type="move">
+        <div class="card-paper" aria-hidden="true"></div>
+        <header class="card-header">
+          <span class="card-type">Move</span>
+          <time class="card-time" datetime="PT20M">20 min</time>
+        </header>
+        <h2 class="card-title">Two-turn walk</h2>
+        <p class="card-description">Leave your door, take the second left, then the second right. Keep moving until ten minutes have passed. Reverse the route home.</p>
+        <div class="card-stamp" aria-hidden="true">
+          <svg class="stamp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </div>
+      </article>
+
+      <!-- Activity 3: Notice -->
+      <article
+        class="activity-card"
+        data-activity="notice"
+        data-type="notice">
+        <div class="card-paper" aria-hidden="true"></div>
+        <header class="card-header">
+          <span class="card-type">Notice</span>
+          <time class="card-time" datetime="PT20M">20 min</time>
+        </header>
+        <h2 class="card-title">One-color field note</h2>
+        <p class="card-description">Choose one color. Follow it for ten minutes through signs, plants, clothing, and light. Photograph or name your best find.</p>
+        <div class="card-stamp" aria-hidden="true">
+          <svg class="stamp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+      </article>
+    </main>
+
+    <section class="primary-action">
+      <button
+        type="button"
+        class="pick-btn"
+        data-pick>
+        <span class="pick-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+        </span>
+        <span class="pick-label">Pick one for me</span>
+      </button>
+    </section>
+
+    <footer class="footer">
+      <p class="footer-text">Built for a 20-minute window. No account. No streak.</p>
+    </footer>
+
+    <!-- Live region for screen reader announcements -->
+    <div class="live-region" aria-live="polite" aria-atomic="true" data-result></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
