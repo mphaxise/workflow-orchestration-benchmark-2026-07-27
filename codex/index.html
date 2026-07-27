@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Choose a small outdoor reset that fits a 20-minute window.">
+    <title>Twenty Minutes Outside</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#activities">Skip to activities</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Twenty Minutes Outside, home">
+        <span class="wordmark-mark" aria-hidden="true">20′</span>
+        <span>Twenty Minutes<br>Outside</span>
+      </a>
+      <p class="issue">Field note <span aria-hidden="true">№</span> 01</p>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A tiny reset for today</p>
+          <h1 id="page-title">Go where your attention gets <em>wider.</em></h1>
+          <p class="intro">Choose the kind of reset you need. We’ll give you one small route into the day.</p>
+        </div>
+
+        <figure class="field-map" aria-label="An abstract trail map leading from a crowded center into open space">
+          <svg viewBox="0 0 520 400" role="img" aria-hidden="true">
+            <path class="contour contour-one" d="M-20 265C47 194 83 245 150 182s126-91 213-38 99-71 177-91"/>
+            <path class="contour contour-two" d="M-27 309c86-76 124-7 194-83s116-88 194-43 99-42 176-110"/>
+            <path class="contour contour-three" d="M-12 350c93-77 148 8 223-68s103-66 174-28 98-56 153-105"/>
+            <path class="route" d="M58 333c66-9 65-86 128-89s55-84 118-83 52-77 118-82"/>
+            <circle class="route-point start" cx="58" cy="333" r="8"/>
+            <circle class="route-point" cx="186" cy="244" r="6"/>
+            <circle class="route-point" cx="304" cy="161" r="6"/>
+            <circle class="sun" cx="422" cy="79" r="35"/>
+          </svg>
+          <figcaption>
+            <span>Start where you are</span>
+            <span>20 min</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="chooser" aria-labelledby="chooser-title">
+        <div class="chooser-heading">
+          <p class="section-number" aria-hidden="true">01</p>
+          <div>
+            <h2 id="chooser-title">What kind of space do you need?</h2>
+            <p>Choose a direction, or let chance decide.</p>
+          </div>
+        </div>
+
+        <div class="filter-list" aria-label="Filter activities">
+          <button class="filter" type="button" data-filter="quiet" aria-pressed="false">
+            <span class="filter-name">Quiet</span>
+            <span class="filter-note">Find a softer edge.</span>
+          </button>
+          <button class="filter" type="button" data-filter="move" aria-pressed="false">
+            <span class="filter-name">Move</span>
+            <span class="filter-note">Put the day back in your body.</span>
+          </button>
+          <button class="filter" type="button" data-filter="notice" aria-pressed="false">
+            <span class="filter-name">Notice</span>
+            <span class="filter-note">Follow one curious detail.</span>
+          </button>
+        </div>
+
+        <div class="pick-row">
+          <button class="pick-button" type="button" data-pick>
+            <span>Pick one for me</span>
+            <span class="pick-arrow" aria-hidden="true">↗</span>
+          </button>
+          <p class="result" data-result role="status" aria-live="polite">Three ways out, all from where you are.</p>
+        </div>
+      </section>
+
+      <section class="activities" id="activities" aria-labelledby="activities-title">
+        <div class="activities-heading">
+          <p class="section-number" aria-hidden="true">02</p>
+          <h2 id="activities-title">Small routes into the day</h2>
+        </div>
+
+        <div class="activity-grid">
+          <article class="activity" data-activity="quiet">
+            <div class="activity-topline">
+              <span class="activity-index">A</span>
+              <span class="activity-type">Quiet</span>
+              <span class="activity-time">20 min</span>
+            </div>
+            <div class="activity-body">
+              <h3>Bench without a view</h3>
+              <p>Walk until you find a bench facing something ordinary. Sit for five minutes. Write down three things that change while you wait.</p>
+            </div>
+            <span class="selected-stamp" aria-hidden="true">Today</span>
+          </article>
+
+          <article class="activity" data-activity="move">
+            <div class="activity-topline">
+              <span class="activity-index">B</span>
+              <span class="activity-type">Move</span>
+              <span class="activity-time">20 min</span>
+            </div>
+            <div class="activity-body">
+              <h3>Two-turn walk</h3>
+              <p>Leave your door, take the second left, then the second right. Keep moving until ten minutes have passed. Reverse the route home.</p>
+            </div>
+            <span class="selected-stamp" aria-hidden="true">Today</span>
+          </article>
+
+          <article class="activity" data-activity="notice">
+            <div class="activity-topline">
+              <span class="activity-index">C</span>
+              <span class="activity-type">Notice</span>
+              <span class="activity-time">20 min</span>
+            </div>
+            <div class="activity-body">
+              <h3>One-color field note</h3>
+              <p>Choose one color. Follow it for ten minutes through signs, plants, clothing, and light. Photograph or name your best find.</p>
+            </div>
+            <span class="selected-stamp" aria-hidden="true">Today</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for a 20-minute window. No account. No streak.</p>
+      <span class="footer-mark" aria-hidden="true">○ · · ↗</span>
+    </footer>
+  </body>
+</html>
