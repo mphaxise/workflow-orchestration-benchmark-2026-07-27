@@ -128,22 +128,25 @@
     state.liveRegion.setAttribute('data-result', message);
   }
 
-  // ────────────────────────────────────────────────────────────────────────
-  // Pick Random Activity
-  // ────────────────────────────────────────────────────────────────────────
+// ────────────────────────────────────────────────────────────────────────
+// Pick Random Activity
+// ────────────────────────────────────────────────────────────────────────
 
   function pickRandomActivity() {
-    // Get currently visible (non-hidden) cards
-    const visibleCards = state.cards.filter(card => !card.hidden);
-
-    if (visibleCards.length === 0) {
-      // No visible cards - shouldn't happen but fallback
-      return;
+    // Restore all cards if any filter is active (requirement: restore if filtered out)
+    if (state.activeFilter !== null) {
+      state.activeFilter = null;
+      state.filters.forEach(btn => {
+        btn.setAttribute('aria-pressed', 'false');
+      });
+      state.cards.forEach(card => {
+        card.hidden = false;
+      });
     }
 
-    // Pick random from visible cards
-    const randomIndex = Math.floor(Math.random() * visibleCards.length);
-    const selectedCard = visibleCards[randomIndex];
+    // Pick random from ALL cards (all three activities)
+    const randomIndex = Math.floor(Math.random() * state.cards.length);
+    const selectedCard = state.cards[randomIndex];
     const activityType = selectedCard.getAttribute('data-type');
 
     // Clear previous selection
@@ -155,7 +158,7 @@
 
     // Announce to screen readers and show toast
     const title = ACTIVITY_TITLES[activityType];
-    announce(`Today's pick: ${title}`);
+    announce(`Today\u2019s pick: ${title}`);
   }
 
   // ────────────────────────────────────────────────────────────────────────
